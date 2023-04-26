@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Simular coordenadas GPS
-n_points = 100000
+n_points = 10000
 lat = np.random.uniform(50.0, 51.0, n_points)
 lon = np.random.uniform(-1.0, 1.0, n_points)
 
