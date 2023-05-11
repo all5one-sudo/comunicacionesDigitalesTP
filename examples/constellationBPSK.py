@@ -6,7 +6,7 @@ sdr = RtlSdr()
 
 # Configuración del SDR
 sdr.sample_rate = 2.4e6
-sdr.center_freq = 88.9e6
+sdr.center_freq = 100e6
 sdr.gain = 50
 
 # Muestreo

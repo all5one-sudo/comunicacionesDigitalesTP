@@ -6,7 +6,7 @@ sdr = RtlSdr()
 
 # Configuración del SDR
 sdr.sample_rate = 2.4e6
-sdr.center_freq = 105.9e6
+sdr.center_freq = 100e6
 sdr.gain = 50
 
 # Lectura de muestras
@@ -17,6 +17,7 @@ plt.specgram(samples, NFFT=1024, Fs=sdr.sample_rate/1e6, Fc=sdr.center_freq/1e6)
 
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Frecuencia (MHz)')
+plt.title('Espectrograma')
 plt.show()
 
 sdr.close()
