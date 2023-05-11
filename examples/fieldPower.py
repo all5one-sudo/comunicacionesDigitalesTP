@@ -4,7 +4,7 @@ from rtlsdr import RtlSdr
 # Configuración SDR
 sdr = RtlSdr()
 sdr.sample_rate = 2.4e6
-sdr.center_freq = 98.9e6
+sdr.center_freq = 105.9e6
 sdr.gain = 'auto' # Ganancia en dB
 
 # Se mide la intensidad para las muestras tomadass

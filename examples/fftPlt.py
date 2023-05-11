@@ -10,7 +10,7 @@ sdr.center_freq = 105.9e6
 sdr.gain = 50
 
 # Lectura de muestras
-samples = sdr.read_samples(256*1024)
+samples = sdr.read_samples(1024)
 
 # Calculo de la FFT
 fft = np.fft.fft(samples)

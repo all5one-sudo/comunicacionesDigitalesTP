@@ -9,22 +9,22 @@ sdr.sample_rate = 2.4e6
 sdr.center_freq = 100e6
 sdr.gain = 'auto'
 
-# Captura de muestras
-samples = sdr.read_samples(1024 * 10)  # Aquí puedes ajustar el número de muestras que deseas capturar
+# Muestreo
+samples = sdr.read_samples(1024 * 20) 
 
-# Parámetros de pwelch
+# Parámetros para la PWelch
 fs = sdr.sample_rate
 nperseg = 1024
 noverlap = nperseg // 2
 
-# Calcula la PSD
+# Se calcula la PSD
 f, Pxx = welch(samples, fs=fs, nperseg=nperseg, noverlap=noverlap)
 
-# Gráfico de la PSD
+# Gráfico
 plt.figure()
 plt.semilogy(f, Pxx)
 plt.xlabel('Frecuencia (Hz)')
 plt.ylabel('Densidad espectral de potencia')
-plt.title('PSD utilizando pwelch')
+plt.title('PSD (pwelch)')
 plt.grid(True)
 plt.show()
